@@ -12,6 +12,9 @@ class ResultViewController: UIViewController {
   // MARK: UI
   @IBOutlet var resultLabel: UILabel!
   
+  // MARK: Properties
+  var answer: String = ""
+  
   // MARK: View Life-Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -20,6 +23,7 @@ class ResultViewController: UIViewController {
   
   // MARK: Action
   @IBAction func onRetry(_ sender: Any) {
+    self.dismiss(animated: true, completion: nil)
   }
   
 }

@@ -18,6 +18,9 @@ class ViewController: UIViewController {
   @IBOutlet var multiplyButton: UIButton!
   @IBOutlet var divideButton: UIButton!
   
+  // MARK: Properties
+  var result: String = ""
+  
   // MARK: View Life-Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -35,5 +38,39 @@ class ViewController: UIViewController {
   }
   
   // MARK: prepare
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    guard let resultVC = segue.destination as? ResultViewController else { return }
+
+    switch segue.identifier {
+    case "showResult":
+      resultVC.answer = result
+      default:
+        print("no match identifier")
+        return
+    }
+  }
+    
+  
+  // MARK: Actions
+  @IBAction func onPlus(_ sender: Any) {
+    performSegue(withIdentifier: "showResult", sender: nil)
+
+  }
+  
+  @IBAction func onMinus(_ sender: Any) {
+    performSegue(withIdentifier: "showResult", sender: nil)
+
+  }
+  
+  @IBAction func onMultiply(_ sender: Any) {
+    performSegue(withIdentifier: "showResult", sender: nil)
+
+  }
+  
+  @IBAction func onDivide(_ sender: Any) {
+    performSegue(withIdentifier: "showResult", sender: nil)
+
+  }
+  
 }
 
