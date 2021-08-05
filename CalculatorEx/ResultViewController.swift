@@ -34,5 +34,4 @@ class ResultViewController: UIViewController {
   @IBAction func onRetry(_ sender: Any) {
     self.dismiss(animated: true, completion: nil)
   }
-  
 }
