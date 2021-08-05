@@ -20,6 +20,7 @@ class ResultViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     configure()
+    resultLabel.text = answer
   }
   
   // MARK: Configure
