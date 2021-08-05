@@ -63,21 +63,33 @@ class ViewController: UIViewController {
   
   // MARK: Actions
   @IBAction func onPlus(_ sender: Any) {
+    guard let num1 = leftTextField.text, let num2 = rightTextField.text else { return }
+    let nums = convertToNumber(num1, num2)
+    result = "\(nums.0 + nums.1)"
     performSegue(withIdentifier: "showResult", sender: nil)
 
   }
   
   @IBAction func onMinus(_ sender: Any) {
+    guard let num1 = leftTextField.text, let num2 = rightTextField.text else { return }
+    let nums = convertToNumber(num1, num2)
+    result = "\(nums.0 + nums.1)"
     performSegue(withIdentifier: "showResult", sender: nil)
 
   }
   
   @IBAction func onMultiply(_ sender: Any) {
+    guard let num1 = leftTextField.text, let num2 = rightTextField.text else { return }
+    let nums = convertToNumber(num1, num2)
+    result = "\(nums.0 + nums.1)"
     performSegue(withIdentifier: "showResult", sender: nil)
 
   }
   
   @IBAction func onDivide(_ sender: Any) {
+    guard let num1 = leftTextField.text, let num2 = rightTextField.text else { return }
+    let nums = convertToNumber(num1, num2)
+    result = "\(nums.0 + nums.1)"
     performSegue(withIdentifier: "showResult", sender: nil)
 
   }
