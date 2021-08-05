@@ -11,6 +11,7 @@ class ResultViewController: UIViewController {
   
   // MARK: UI
   @IBOutlet var resultLabel: UILabel!
+  @IBOutlet var retryButton: UIButton!
   
   // MARK: Properties
   var answer: String = ""
@@ -18,7 +19,14 @@ class ResultViewController: UIViewController {
   // MARK: View Life-Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    configure()
+  }
+  
+  // MARK: Configure
+  func configure() {
+    view.backgroundColor = .systemYellow
+    resultLabel.textColor = .white
+    retryButton.tintColor = .red
   }
   
   // MARK: Action
