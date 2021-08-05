@@ -180,6 +180,7 @@
                     <navigationItem key="navigationItem" title="연산 결과" id="OrK-vQ-73y"/>
                     <connections>
                         <outlet property="resultLabel" destination="qqk-jT-nM6" id="CAx-FX-5Pm"/>
+                        <outlet property="retryButton" destination="l5F-SL-1me" id="tGS-bh-zis"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTx-zf-2e9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
