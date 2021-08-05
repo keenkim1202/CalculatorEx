@@ -38,6 +38,18 @@ class ViewController: UIViewController {
   }
   
   // MARK: prepare
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    guard let resultVC = segue.destination as? ResultViewController else { return }
+
+    switch segue.identifier {
+    case "showResult":
+      resultVC.answer = result
+      default:
+        print("no match identifier")
+        return
+    }
+  }
+    
   
   // MARK: Actions
   @IBAction func onPlus(_ sender: Any) {
