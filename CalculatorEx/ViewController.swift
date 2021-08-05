@@ -18,6 +18,9 @@ class ViewController: UIViewController {
   @IBOutlet var multiplyButton: UIButton!
   @IBOutlet var divideButton: UIButton!
   
+  // MARK: Properties
+  var result: String = ""
+  
   // MARK: View Life-Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
