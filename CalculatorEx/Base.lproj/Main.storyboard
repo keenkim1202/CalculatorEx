@@ -111,12 +111,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="사칙연산 앱" id="ois-FK-EH2"/>
                     <connections>
-                        <outlet property="divideButton" destination="NBQ-kz-7El" id="cBM-yS-xko"/>
-                        <outlet property="leftTextField" destination="OcB-Y4-peu" id="Yov-99-0aE"/>
-                        <outlet property="minusButton" destination="MHE-yu-gza" id="B7Q-cR-H42"/>
-                        <outlet property="multiplyButton" destination="aZ2-De-t9y" id="8a5-U5-UIl"/>
-                        <outlet property="plusButton" destination="RIe-qF-vgz" id="cOm-VG-J8Y"/>
-                        <outlet property="rightTextField" destination="bYr-h3-oQa" id="xz7-bV-xxQ"/>
+                        <outlet property="divideButton" destination="NBQ-kz-7El" id="W8n-MN-Pd3"/>
+                        <outlet property="leftTextField" destination="OcB-Y4-peu" id="40x-X5-w5s"/>
+                        <outlet property="minusButton" destination="MHE-yu-gza" id="RAE-r0-jLt"/>
+                        <outlet property="multiplyButton" destination="aZ2-De-t9y" id="G7t-gG-Rb2"/>
+                        <outlet property="plusButton" destination="RIe-qF-vgz" id="Mfy-Dd-YsG"/>
+                        <outlet property="rightTextField" destination="bYr-h3-oQa" id="xbY-Ya-62b"/>
                         <segue destination="QZZ-RJ-8BI" kind="show" id="WgK-N1-JO6"/>
                     </connections>
                 </viewController>
@@ -152,7 +152,7 @@
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <state key="normal" title="다시 시도"/>
                                         <connections>
-                                            <action selector="onRetryButton:" destination="QZZ-RJ-8BI" eventType="touchUpInside" id="mY2-RB-x7t"/>
+                                            <action selector="onRetry:" destination="QZZ-RJ-8BI" eventType="touchUpInside" id="BJ7-qc-MLf"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -167,8 +167,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="연산 결과" id="OrK-vQ-73y"/>
                     <connections>
-                        <outlet property="answerLabel" destination="qqk-jT-nM6" id="81z-Jr-6gP"/>
-                        <outlet property="retryButton" destination="l5F-SL-1me" id="MVt-QS-S8A"/>
+                        <outlet property="resultLabel" destination="qqk-jT-nM6" id="CAx-FX-5Pm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTx-zf-2e9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -9,8 +9,17 @@ import UIKit
 
 class ResultViewController: UIViewController {
   
+  // MARK: UI
+  @IBOutlet var resultLabel: UILabel!
+  
+  // MARK: View Life-Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     
   }
+  
+  // MARK: Action
+  @IBAction func onRetry(_ sender: Any) {
+  }
+  
 }
