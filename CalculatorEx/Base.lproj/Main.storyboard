@@ -56,6 +56,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="+"/>
+                                                <connections>
+                                                    <action selector="onPlus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W5w-nn-RNA"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHE-yu-gza">
                                                 <rect key="frame" x="80" y="0.0" width="60" height="60"/>
@@ -64,6 +67,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="-"/>
+                                                <connections>
+                                                    <action selector="onMinus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r9a-dC-5Bc"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZ2-De-t9y">
                                                 <rect key="frame" x="160" y="0.0" width="60" height="60"/>
@@ -72,6 +78,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="x"/>
+                                                <connections>
+                                                    <action selector="onMultiply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e1s-dG-nco"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBQ-kz-7El">
                                                 <rect key="frame" x="240" y="0.0" width="60" height="60"/>
@@ -80,6 +89,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="/"/>
+                                                <connections>
+                                                    <action selector="onDivide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F54-oC-seb"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>

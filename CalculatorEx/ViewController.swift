@@ -38,5 +38,19 @@ class ViewController: UIViewController {
   }
   
   // MARK: prepare
+  
+  // MARK: Actions
+  @IBAction func onPlus(_ sender: Any) {
+  }
+  
+  @IBAction func onMinus(_ sender: Any) {
+  }
+  
+  @IBAction func onMultiply(_ sender: Any) {
+  }
+  
+  @IBAction func onDivide(_ sender: Any) {
+  }
+  
 }
 
