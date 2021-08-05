@@ -9,6 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
   
+  // MARK: Enum
+  enum Operator {
+    case plus
+    case minus
+    case multiply
+    case divide
+  }
+  
   // MARK: UI
   @IBOutlet var leftTextField: UITextField!
   @IBOutlet var rightTextField: UITextField!
@@ -37,62 +45,52 @@ class ViewController: UIViewController {
     }
   }
   
-  func convertToNumber(_ num1: String, _ num2: String) -> (Double, Double) {
-    var nums: (lhs: Double, rhs: Double) = (0,0)
-    
-    if Double(num1) != nil && Double(num2) != nil {
-      nums.lhs = Double(num1)!
-      nums.rhs = Double(num2)!
-    }
-    return nums
-  }
-  
-  // MARK: prepare
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    guard let resultVC = segue.destination as? ResultViewController else { return }
+  func calculator(_ num1: String, _ num2: String, _ op: Operator) {
+    guard let resultVC = storyboard?.instantiateViewController(identifier: "resultVC") as? ResultViewController else { return }
 
-    switch segue.identifier {
-    case "showResult":
-      resultVC.answer = result
-      default:
-        print("no match identifier")
-        return
+    guard let num1 = Double(num1),
+          let num2 = Double(num2) else {
+      resultVC.answer = "올비르지 않은 입력"
+      self.present(resultVC, animated: true, completion: nil)
+      return
     }
-  }
     
+    switch op {
+    case .plus:
+      resultVC.answer = String(num1 + num2)
+    case .minus:
+      resultVC.answer = String(num1 - num2)
+    case .multiply:
+      resultVC.answer = String(num1 * num2)
+    case .divide:
+      resultVC.answer = String(num1 / num2)
+    }
+    self.present(resultVC, animated: true, completion: nil)
+  }
   
   // MARK: Actions
   @IBAction func onPlus(_ sender: Any) {
-    guard let num1 = leftTextField.text, let num2 = rightTextField.text else { return }
-    let nums = convertToNumber(num1, num2)
-    result = "\(nums.0 + nums.1)"
-    performSegue(withIdentifier: "showResult", sender: nil)
-
+    guard let num1: String = leftTextField.text,
+          let num2: String = rightTextField.text else { return }
+    calculator(num1, num2, .plus)
   }
   
   @IBAction func onMinus(_ sender: Any) {
-    guard let num1 = leftTextField.text, let num2 = rightTextField.text else { return }
-    let nums = convertToNumber(num1, num2)
-    result = "\(nums.0 - nums.1)"
-    performSegue(withIdentifier: "showResult", sender: nil)
-
+    guard let num1: String = leftTextField.text,
+          let num2: String = rightTextField.text else { return }
+    calculator(num1, num2, .minus)
   }
   
   @IBAction func onMultiply(_ sender: Any) {
-    guard let num1 = leftTextField.text, let num2 = rightTextField.text else { return }
-    let nums = convertToNumber(num1, num2)
-    result = "\(nums.0 * nums.1)"
-    performSegue(withIdentifier: "showResult", sender: nil)
-
+    guard let num1: String = leftTextField.text,
+          let num2: String = rightTextField.text else { return }
+    calculator(num1, num2, .multiply)
   }
   
   @IBAction func onDivide(_ sender: Any) {
-    guard let num1 = leftTextField.text, let num2 = rightTextField.text else { return }
-    let nums = convertToNumber(num1, num2)
-    result = "\(nums.0 / nums.1)"
-    performSegue(withIdentifier: "showResult", sender: nil)
-
+    guard let num1: String = leftTextField.text,
+          let num2: String = rightTextField.text else { return }
+    calculator(num1, num2, .divide)
   }
-  
 }
 

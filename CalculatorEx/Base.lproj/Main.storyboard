@@ -139,7 +139,7 @@
         <!--연산 결과-->
         <scene sceneID="ZCK-Yp-Xfq">
             <objects>
-                <viewController storyboardIdentifier="secondVC" modalPresentationStyle="fullScreen" id="QZZ-RJ-8BI" customClass="ResultViewController" customModule="CalculatorEx" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="resultVC" modalPresentationStyle="fullScreen" id="QZZ-RJ-8BI" customClass="ResultViewController" customModule="CalculatorEx" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xXL-C9-un5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
