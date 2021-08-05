@@ -117,7 +117,7 @@
                         <outlet property="multiplyButton" destination="aZ2-De-t9y" id="G7t-gG-Rb2"/>
                         <outlet property="plusButton" destination="RIe-qF-vgz" id="Mfy-Dd-YsG"/>
                         <outlet property="rightTextField" destination="bYr-h3-oQa" id="xbY-Ya-62b"/>
-                        <segue destination="QZZ-RJ-8BI" kind="show" id="WgK-N1-JO6"/>
+                        <segue destination="QZZ-RJ-8BI" kind="show" identifier="showResult" id="WgK-N1-JO6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
