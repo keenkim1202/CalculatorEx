@@ -21,10 +21,18 @@ class ViewController: UIViewController {
   // MARK: View Life-Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    configure()
   }
   
   // MARK: Configure
+  func configure() {
+    view.backgroundColor = .systemGreen
+    [plusButton, minusButton, multiplyButton, divideButton].forEach { button in
+      button?.tintColor = .white
+      button?.backgroundColor = .systemBlue
+      button?.layer.cornerRadius = CGFloat(8)
+    }
+  }
   
   // MARK: prepare
 }
