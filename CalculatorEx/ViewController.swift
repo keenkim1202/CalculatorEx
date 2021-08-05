@@ -37,6 +37,16 @@ class ViewController: UIViewController {
     }
   }
   
+  func convertToNumber(_ num1: String, _ num2: String) -> (Double, Double) {
+    var nums: (lhs: Double, rhs: Double) = (0,0)
+    
+    if Double(num1) != nil && Double(num2) != nil {
+      nums.lhs = Double(num1)!
+      nums.rhs = Double(num2)!
+    }
+    return nums
+  }
+  
   // MARK: prepare
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     guard let resultVC = segue.destination as? ResultViewController else { return }
