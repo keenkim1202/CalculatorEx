@@ -53,15 +53,23 @@ class ViewController: UIViewController {
   
   // MARK: Actions
   @IBAction func onPlus(_ sender: Any) {
+    performSegue(withIdentifier: "showResult", sender: nil)
+
   }
   
   @IBAction func onMinus(_ sender: Any) {
+    performSegue(withIdentifier: "showResult", sender: nil)
+
   }
   
   @IBAction func onMultiply(_ sender: Any) {
+    performSegue(withIdentifier: "showResult", sender: nil)
+
   }
   
   @IBAction func onDivide(_ sender: Any) {
+    performSegue(withIdentifier: "showResult", sender: nil)
+
   }
   
 }
